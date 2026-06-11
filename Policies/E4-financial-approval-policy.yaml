@@ -1,0 +1,26 @@
+# financial-approval-policy.yaml
+apiVersion: governance.toolkit/v1
+name: financial-approvals
+agents: ["*"]
+default_action: allow
+
+rules:
+  - name: approve-large-transfer
+    condition: "action.type == 'transfer'"
+    action: require_approval
+    approvers: ["treasury-ops", "compliance"]
+    description: "All transfers require human approval"
+    priority: 100
+
+  - name: approve-account-close
+    condition: "action.type == 'close_account'"
+    action: require_approval
+    approvers: ["branch-manager"]
+    description: "Account closures need branch manager sign-off"
+    priority: 100
+
+  - name: block-delete
+    condition: "action.type == 'delete'"
+    action: deny
+    description: "Delete operations are never allowed"
+    priority: 1000
