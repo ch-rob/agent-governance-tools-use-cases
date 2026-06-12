@@ -29,6 +29,8 @@ safe_tool = govern(my_tool, policy="policy.yaml")
 
 AGT supports Python, TypeScript, .NET, Go, and Rust, with adapters for LangChain, AutoGen, CrewAI, Semantic Kernel, OpenAI Agents SDK, and more.
 
+For a deep dive into how the components (Agent OS, AgentMesh, Agent Runtime, Agent SRE) fit together, see the [AGT Architecture document](https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/ARCHITECTURE.md).
+
 ## Prerequisites
 
 ```bash
@@ -62,6 +64,7 @@ If you're evaluating AGT against other tooling, the [LandscapeAnalysis/](Landsca
 
 - [OtherFrameworks.md](LandscapeAnalysis/OtherFrameworks.md) — comparison with other agent governance and safety frameworks
 - [Agent365Comparison.md](LandscapeAnalysis/Agent365Comparison.md) — how AGT relates to Microsoft 365 / Copilot agent tooling
+- [OWASP-AGT-Coverage.md](LandscapeAnalysis/OWASP-AGT-Coverage.md) — how AGT covers all 10 OWASP Agentic Top 10 risks
 
 These documents cover where AGT fits, what it overlaps with, and where alternative or complementary tools may be a better choice for your use case.
 
