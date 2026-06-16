@@ -45,6 +45,7 @@ htmlcov/
 *.swp
 *.swo
 *~
+Docs/~*
 
 # OS
 .DS_Store
