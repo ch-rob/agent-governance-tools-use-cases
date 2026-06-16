@@ -1,3 +1,7 @@
+# Tested in Python 3.14.4
+# From: https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/tutorials/36-govern-quickstart.md
+# Preconditions: pip install agent-governance-toolkit[full]
+
 from agentmesh.governance import govern
 
 def send_email(to, subject, body):
@@ -24,7 +28,7 @@ rules:
     },
 )
 
-# If denied, returns the dict instead of raising
+# If denied, returns the dict instead of raising exception
 result = safe_send(to="you", subject="Q3 Revenue", body="...")
 # Result: {'sent': False, 'blocked_by': 'block-you', 'reason': 'Not allowed to send emails to you'}
 
